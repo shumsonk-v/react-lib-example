@@ -1,0 +1,63 @@
+{
+  "React Functional Component": {
+    "prefix": "crfc",
+    "body": [
+      "import React, { FC, PropsWithChildren } from 'react';\n",
+      "type $1Props = PropsWithChildren<object>;\n",
+      "const $1: FC<$1Props> = (props) => {",
+      "\tconst { children } = props;\n",
+      "\treturn <div>{children}</div>;",
+      "}\n",
+      "export default $1;\n"
+    ],
+    "description": "React functional component"
+  },
+  "React useState snippet": {
+    "prefix": "ustate",
+    "body": "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);",
+    "description": "React useState"
+  },
+  "React useEffect snippet": {
+    "prefix": "ueffect",
+    "body": ["useEffect(() => {", "\t$1", "}, []);"],
+    "description": "React useEffect"
+  },
+  "React useCallback snippet": {
+    "prefix": "ucallback",
+    "body": ["const $1 = useCallback(() => {", "\t$2", "}, []);"],
+    "description": "React useCallback"
+  },
+  "React useMemo snippet": {
+    "prefix": "umemo",
+    "body": ["const $1 = useMemo(() => {", "\treturn null;", "}, []);"],
+    "description": "React useMemo"
+  },
+  "React Storybook snippet": {
+    "prefix": "rstory",
+    "body": [
+      "import React from 'react';\n",
+      "import { ComponentMeta, ComponentStory } from '@storybook/react';",
+      "import { Box } from 'theme-ui';\n",
+      "import { $1 } from '../components/$1';\n",
+      "export default {",
+      "\ttitle: 'Components/$1',",
+      "\tcomponent: $1,",
+      "\targTypes: {",
+      "\t\tchildren: {",
+      "\t\t\tdescription: 'children',",
+      "\t\t\tcontrol: {",
+      "\t\t\t\ttype: 'text',",
+      "\t\t\t},",
+      "\t\t},",
+      "\t},",
+      "} as ComponentMeta<typeof $1>;\n",
+      "const $1Template: ComponentStory<typeof $1> = (args) => (",
+      "\t<Box><$1 {...args} /></Box>",
+      ");\n",
+      "export const Simple = $1Template.bind({});",
+      "Simple.args = {",
+      "\tchildren: '',",
+      "};"
+    ]
+  }
+}

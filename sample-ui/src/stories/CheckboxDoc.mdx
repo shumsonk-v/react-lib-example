@@ -1,0 +1,59 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Box } from 'theme-ui';
+import { Checkbox } from '../components/Checkbox';
+
+<Meta title="Components/Checkbox" component={Checkbox} />
+
+# Checkbox
+
+<Canvas>
+  <Story id="components-checkbox--simple" />
+</Canvas>
+
+<ArgsTable of={Checkbox} />
+
+---
+
+## Sizes
+
+<Canvas>
+  <Story id="components-checkbox--sizes" />
+</Canvas>
+
+---
+
+## Colors
+
+<Canvas>
+  <Story id="components-checkbox--colors" />
+</Canvas>
+
+---
+
+## Switch
+
+You can choose to render your checkbox as switch style. Simply give `mode="switch"` to the `Checkbox` component.
+
+<Canvas>
+  <Story id="components-checkbox--switch" />
+</Canvas>
+
+---
+
+## Switch Sizes
+
+Size is also available in switch mode the same you use for checkbox
+
+<Canvas>
+  <Story id="components-checkbox--switch-sizes" />
+</Canvas>
+
+---
+
+## Switch Colors
+
+And of course, colors too.
+
+<Canvas>
+  <Story id="components-checkbox--switch-colors" />
+</Canvas>

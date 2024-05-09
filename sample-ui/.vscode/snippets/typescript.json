@@ -1,0 +1,7 @@
+{
+  "Typescript export component": {
+    "prefix": "compexp",
+    "body": ["export type { $1Props } from './types';", "export { default as $1 } from './$1';"],
+    "description": "Typescript export component"
+  }
+}

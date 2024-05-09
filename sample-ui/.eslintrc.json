@@ -1,0 +1,112 @@
+{
+  "globals": {
+    "JSX": true,
+    "google": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "overrides": [
+    {
+      // or whatever matches stories specified in .storybook/main.js
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+      "rules": {
+        // example of overriding a rule
+        "storybook/hierarchy-separator": "error",
+        // example of disabling a rule
+        "storybook/default-exports": "off"
+      }
+    }
+  ],
+  "plugins": ["unused-imports"],
+  "extends": ["plugin:react/recommended", "plugin:@typescript-eslint/recommended", "airbnb", "plugin:react-hooks/recommended", "prettier", "plugin:storybook/recommended"],
+  "rules": {
+    "max-len": ["warn", { "code": 140, "tabWidth": 2, "ignoreTemplateLiterals": true }],
+    "import/extensions": 0,
+    "import/export": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 0,
+    "no-use-before-define": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "no-shadow": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-explicit-any": ["warn", { "ignoreRestArgs": true }],
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "object-curly-newline": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": "off",
+    "react/jsx-indent": [2, 2, { "indentLogicalExpressions": true }],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "array-element-newline": [
+      "error",
+      "consistent"
+    ],
+    "react/jsx-max-props-per-line": [1, { "maximum": 3, "when": "multiline" }],
+    "react/jsx-first-prop-new-line": [1, "multiline"],
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-indent-props": [2, { "indentMode": 2, "ignoreTernaryOperator": true }],
+    "react/jsx-one-expression-per-line": [1, { "allow": "single-child" }],
+    "react/prop-types": 0,
+    "react/no-unused-prop-types": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "object-curly-spacing": "off",
+    "react/static-property-placement": "off",
+    "no-bitwise": "off",
+    "no-return-assign": ["warn", "except-parens"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "camelcase": "warn",
+    "@next/next/no-img-element": "off",
+    "react/function-component-definition": "off"
+  }
+}

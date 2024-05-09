@@ -1,0 +1,14 @@
+{
+  "MDX storybook documentation": {
+    "prefix": "storydoc",
+    "body": [
+      "import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';",
+      "import { Box } from 'theme-ui';",
+      "import { $1 } from '../components/$1';\n",
+      "<Meta title=\"Components/$1\" component={$1} />\n",
+      "# $1\n",
+      "<ArgsTable of={$1} />"
+    ],
+    "description": "Typescript export component"
+  }
+}

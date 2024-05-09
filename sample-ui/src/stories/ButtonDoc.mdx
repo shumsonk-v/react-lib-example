@@ -1,0 +1,43 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Button } from '../components/Button';
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+Button is implemented from `Box` component, comes with several variants, sizes, shapes and colors.
+
+<ArgsTable of={Button} />
+
+The rest of props will be a native properties of `a`, `button` and `input`.
+
+---
+
+## Simple
+
+<Canvas>
+  <Story id="components-button--simple" />
+</Canvas>
+
+Above example shows all state including icon on the left and right in normal size buttons. This component takes `icon` as a `ReactNode` type so you can put anything (literally anything with type `ReactNode`) as your icon and customize it freely. We only set some styles for an icon in case you use a 24dp based icon font like Material icons but you can still customize the styles to match your preferences.
+
+---
+
+## Sizes
+
+<Canvas>
+  <Story id="components-button--sizes" />
+</Canvas>
+
+All button variants can be used along with `size` prop.
+
+---
+
+## Shapes
+
+<Canvas>
+  <Story id="components-button--shapes" />
+</Canvas>
+
+The `pill` button is the same as normal, all the different is only a border radius style. The squared and rounded button hide your text even if you assign to it. But it takes `leftIcon` or `rightIcon` and display it in the middle. Of course, it changes size accordingly.
